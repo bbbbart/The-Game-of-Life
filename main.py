@@ -17,8 +17,13 @@ def countNeighbors(y, x):
             count+=1
         if grid[y-1][x] == "■":
             count+=1
+        if grid[y-1][x-1] == "■":
+            count+=1
+        if grid[y+1][x+1] == "■":
+            count+=1
         return count
-    
+
 print(countNeighbors(15, 16))
+
 for row in grid:
     print(" ".join(row))
