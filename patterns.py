@@ -1,17 +1,15 @@
 import random
 
 def glider(grid):
-    grid = grid
     grid[26][24] = "■"
     grid[26][23] = "■"
-    grid[27][23] = "■"
-    grid[28][22] = "■"
-    grid[28][25] = "■"
+    grid[26][22] = "■"
+    grid[27][22] = "■"
+    grid[28][23] = "■"
     
     return grid
 
 def gliderGun(grid):
-    grid = grid
     grid[5][1] = "■"
     grid[5][2] = "■"
     grid[6][1] = "■"
@@ -52,7 +50,6 @@ def gliderGun(grid):
     return grid
 
 def pulsar(grid):
-    grid = grid
     grid[23][24] = "■"
     grid[22][24] = "■"
     grid[21][24] = "■"
@@ -104,25 +101,23 @@ def pulsar(grid):
     
     return grid
 
-def Pentadecathlon(grid):
-    grid = grid
-    grid[25][21] = "■"
-    grid[25][22] = "■"
-    grid[25][24] = "■"
-    grid[25][25] = "■"
-    grid[25][26] = "■"
-    grid[25][27] = "■"
-    grid[25][29] = "■"
-    grid[25][30] = "■"
-    grid[24][23] = "■"
-    grid[26][23] = "■"
-    grid[24][28] = "■"
-    grid[26][28] = "■"
+def pentadecathlon(grid):
+    grid[24][21] = "■"
+    grid[24][22] = "■"
+    grid[24][24] = "■"
+    grid[24][25] = "■"
+    grid[24][26] = "■"
+    grid[24][27] = "■"
+    grid[24][29] = "■"
+    grid[24][30] = "■"
+    grid[23][23] = "■"
+    grid[25][23] = "■"
+    grid[23][28] = "■"
+    grid[25][28] = "■"
 
     return grid
 
 def randomGrid(grid):
-    grid = grid
     for r, row in enumerate(grid):
             for c, element in enumerate(row):
                 if random.random() <= 0.2:
