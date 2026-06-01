@@ -4,8 +4,9 @@ import subprocess
 def clear_terminal():
     subprocess.run("cls", shell=True)
 
-def countNeighbors(y, x, grid, length):
+def countNeighbors(y, x, grid):
     count = 0
+    length = len(grid[0])
     if y == length-1 or y == 0 or x == length-1 or x == 0:
         return -1
     else:
@@ -27,11 +28,11 @@ def countNeighbors(y, x, grid, length):
             count+=1
         return count
 
-def updateGrid(grid, size):
+def updateGrid(grid):
     grid2 = copy.deepcopy(grid)
     for r, row in enumerate(grid):
         for c, element in enumerate(row):
-            count = countNeighbors(r, c, grid, size)
+            count = countNeighbors(r, c, grid)
             if count == -1:
                 grid2[r][c] = "X"
             if 0 <= count <= 1:

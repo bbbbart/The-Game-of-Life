@@ -37,7 +37,7 @@ while continueSimulation:
                 for row in grid1:
                     print(" ".join(row))
                 time.sleep(0.75)
-                grid1 = grid.updateGrid(grid1, gridsize)
+                grid1 = grid.updateGrid(grid1)
         except KeyboardInterrupt:
             choice = input("SIMULATION PAUSED \n 1. Unpause \n 2. Return to Menu \n 3. Quit \n")
             if choice == "2":
