@@ -4,7 +4,7 @@ import subprocess
 def clear_terminal():
     subprocess.run("cls", shell=True)
 
-def countNeighbors(y, x, grid):
+def countNeighbors(y, x, grid): ## counts neighbors based on game rules
     count = 0
     length = len(grid[0])
     if y == length-1 or y == 0 or x == length-1 or x == 0:
@@ -28,7 +28,7 @@ def countNeighbors(y, x, grid):
             count+=1
         return count
 
-def updateGrid(grid):
+def updateGrid(grid): ## updates grid based on neighbor count
     grid2 = copy.deepcopy(grid)
     for r, row in enumerate(grid):
         for c, element in enumerate(row):

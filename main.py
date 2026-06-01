@@ -5,7 +5,7 @@ import patterns
 continueSimulation = True
 gridsize = 50
 
-while continueSimulation:
+while continueSimulation: ## checks if user quits simulation or returns to menu
     grid1 = [["." for y in range(gridsize)] for x in range (gridsize)]
     generation = 0
     unpause = True
@@ -22,12 +22,12 @@ while continueSimulation:
     if choice == "5":
         grid1 = patterns.randomGrid(grid1)
 
-    for r, row in enumerate(grid1):
+    for r, row in enumerate(grid1):  ##creates grid border
         for c, element in enumerate(row):
             if r == 0 or r == gridsize-1 or c == 0 or c == gridsize-1:
                 grid1[r][c] = "X"
 
-    while unpause:
+    while unpause: ## checks if user unpauses
         try: 
             while True:
                 grid.clear_terminal()               
@@ -36,7 +36,7 @@ while continueSimulation:
                 print(f"Generation: {generation}\n")
                 for row in grid1:
                     print(" ".join(row))
-                time.sleep(0.75)
+                time.sleep(0.5)
                 grid1 = grid.updateGrid(grid1)
         except KeyboardInterrupt:
             choice = input("SIMULATION PAUSED \n 1. Unpause \n 2. Return to Menu \n 3. Quit \n")

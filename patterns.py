@@ -1,6 +1,6 @@
 import random
 
-def printPattern(grid, pattern):
+def printPattern(grid, pattern): 
     for r, c in pattern:
         grid[r][c] = "■"
     return grid
@@ -53,7 +53,7 @@ def pentadecathlon(grid):
 
 def randomGrid(grid):
     for r, row in enumerate(grid):
-            for c, element in enumerate(row):
+            for c in enumerate(row):
                 if random.random() <= 0.2:
                     grid[r][c] = "■"
     return grid
