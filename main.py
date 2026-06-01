@@ -3,8 +3,10 @@ import grid
 import patterns
 
 continueSimulation = True
+gridsize = 50
+
 while continueSimulation:
-    grid1 = [["." for y in range(50)] for x in range (50)]
+    grid1 = [["." for y in range(gridsize)] for x in range (gridsize)]
     generation = 0
     unpause = True
 
@@ -16,13 +18,13 @@ while continueSimulation:
     if choice == "3":
         grid1 = patterns.pulsar(grid1)
     if choice == "4":
-        grid1 = patterns.Pentadecathlon(grid1)
+        grid1 = patterns.pentadecathlon(grid1)
     if choice == "5":
         grid1 = patterns.randomGrid(grid1)
 
     for r, row in enumerate(grid1):
         for c, element in enumerate(row):
-            if r == 0 or r == 49 or c == 0 or c == 49:
+            if r == 0 or r == gridsize-1 or c == 0 or c == gridsize-1:
                 grid1[r][c] = "X"
 
     while unpause:
@@ -35,7 +37,7 @@ while continueSimulation:
                 for row in grid1:
                     print(" ".join(row))
                 time.sleep(0.75)
-                grid1 = grid.updateGrid(grid1)
+                grid1 = grid.updateGrid(grid1, gridsize)
         except KeyboardInterrupt:
             choice = input("SIMULATION PAUSED \n 1. Unpause \n 2. Return to Menu \n 3. Quit \n")
             if choice == "2":
