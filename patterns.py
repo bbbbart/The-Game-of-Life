@@ -53,7 +53,7 @@ def pentadecathlon(grid):
 
 def randomGrid(grid):
     for r, row in enumerate(grid):
-            for c in enumerate(row):
+            for c, column in enumerate(row):
                 if random.random() <= 0.2:
                     grid[r][c] = "■"
     return grid
