@@ -2,7 +2,7 @@
 
 <img width="709" height="914" alt="image" src="https://github.com/user-attachments/assets/07a3c4bc-5447-4474-9455-fdb41bdf3919" />
 
-This is my attempt at coding Conway's Game of Life as a beginner challenge for learning Python and GitHub for the first time.
+This is my attempt at coding Conway's Game of Life as a beginner challenge for learning Python and GitHub.
 
 ## Warning
 Those with a history of photosensitive epilepsy should avoid running this program due to the terminal being prone to flickering while running.
