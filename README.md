@@ -55,6 +55,8 @@ Each cell follows these 4 rules:
 3.  Any live cell with 2 or 3 neighbors survives
 4.  Any dead cell that has exactly 3 neighbors becomes alive
 
+In addition, because of the limited grid size, all cells that enter the "X" border die.
+
 ### User Inputs
 
 When running the simulation, you begin with an option to choose a preset, which can be done by entering the appropriate number into the terminal. A simulation can be paused by pressing Ctrl+C, which then gives the options of unpausing, returning to selection menu, and quitting the program.
