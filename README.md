@@ -63,6 +63,8 @@ When running the simulation, you begin with an option to choose a preset, which 
 
 This program uses Python 3.14 or newer
 
+See release 1.0.0 for link to zip download.
+
 Clone or download repository and run:
 `py main.py`
 
